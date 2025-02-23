@@ -33,3 +33,63 @@ def delete_starting_evens(my_list):
 
 print(delete_starting_evens([4, 8, 10, 11, 12, 15]))
 print(delete_starting_evens([4, 8, 10]))
+
+
+def odd_indices(my_list):
+    new_list = []
+    for i in range(
+        1, len(my_list), 2
+    ):  # range function takes 3 arguments, start, stop, step
+        new_list.append(my_list[i])
+    return new_list
+
+
+def exponents(bases, powers):
+    my_list = []
+    for num in bases:
+        for nums in powers:
+            my_list.append(pow(num, nums))
+
+    return my_list
+
+
+def larger_sum(
+    lst1, lst2
+):  # I was thinking here to use map but map gives a list an array of values
+    sum1 = 0
+    sum2 = 0
+    for num in lst1:
+        sum1 += num
+    for num in lst2:
+        sum2 += num
+
+    if sum2 > sum1:
+        return lst2
+    else:
+        return lst1
+
+
+def reversed_list(lst1, lst2):
+    for index in range(len(lst1)):
+        if lst1[index] != lst2[len(lst2) - 1 - index]:
+            return False
+    return True
+
+
+destinations = [
+    "Paris, France",
+    "Shanghai, China",
+    "Los Angeles, USA",
+    "São Paulo, Brazil",
+    "Cairo, Egypt",
+]
+
+test_traveler = [["Erin Wilkes", "Shanghai, China"], ["historical site", "art"]]
+
+
+def get_destination_index(destination):
+    destination_index = destinations.index(destination)
+    return destination_index
+
+
+print(get_destination_index("Los Angeles, USA"))
