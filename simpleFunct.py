@@ -93,3 +93,39 @@ def get_destination_index(destination):
 
 
 print(get_destination_index("Los Angeles, USA"))
+
+
+def gregs_e_tagger(text):
+    length = int(len(text))
+    if length % 2 == 0:
+        middle_string = len(text) / 2
+        new = text[:middle_string] + "greg" + text[middle_string:]
+        return new
+    else:
+        length = length // 2
+        new = text[:length] + "greg" + text[length:]
+        return new
+
+
+print(gregs_e_tagger("Vilma"))
+
+
+def no_space(x):
+    # your code here
+    x = x.rsplit(" ")
+    y = "".join(x)
+    return y
+
+
+def fake_bin(x):
+    y = []
+    for num in x:
+        if int(num) < 5:
+            y.append("0")
+        else:
+            y.append("1")
+    x = "".join(y)
+    return x
+
+
+print(fake_bin("45385593107834564"))
