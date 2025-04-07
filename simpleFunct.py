@@ -31,8 +31,8 @@ def delete_starting_evens(my_list):
     return my_list
 
 
-print(delete_starting_evens([4, 8, 10, 11, 12, 15]))
-print(delete_starting_evens([4, 8, 10]))
+# print(delete_starting_evens([4, 8, 10, 11, 12, 15]))
+# print(delete_starting_evens([4, 8, 10]))
 
 
 def odd_indices(my_list):
@@ -92,7 +92,7 @@ def get_destination_index(destination):
     return destination_index
 
 
-print(get_destination_index("Los Angeles, USA"))
+# print(get_destination_index("Los Angeles, USA"))
 
 
 def gregs_e_tagger(text):
@@ -107,7 +107,7 @@ def gregs_e_tagger(text):
         return new
 
 
-print(gregs_e_tagger("Vilma"))
+# print(gregs_e_tagger("Vilma"))
 
 
 def no_space(x):
@@ -128,4 +128,28 @@ def fake_bin(x):
     return x
 
 
-print(fake_bin("45385593107834564"))
+# print(fake_bin("45385593107834564"))
+
+
+def points(matches):
+    tot_points = 0
+    for match in matches:
+        if int(match[0]) > int(match[2]):
+            tot_points += 3
+        elif int(match[0]) == int(match[2]):
+            tot_points += 1
+        else:
+            tot_points += 0
+    return tot_points
+
+
+def average(numbers):
+    length = len(numbers)
+    total = 0
+    for num in numbers:
+        total += num
+    average = total / length
+    return average
+
+
+print(average([1, 2, 3, 4, 5]))
