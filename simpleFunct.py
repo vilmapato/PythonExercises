@@ -144,6 +144,8 @@ def points(matches):
 
 
 def average(numbers):
+    # if the array is empty return 0
+    # if the array is not empty calculate the average
     length = len(numbers)
     total = 0
     for num in numbers:
